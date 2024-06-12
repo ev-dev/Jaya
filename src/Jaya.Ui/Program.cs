@@ -4,7 +4,6 @@
 //
 using Avalonia;
 using Avalonia.Logging;
-using Avalonia.Logging.Serilog;
 
 namespace Jaya.Ui
 {
@@ -15,7 +14,7 @@ namespace Jaya.Ui
         {
             return AppBuilder.Configure<App>()
                            .UsePlatformDetect()
-                           .LogToDebug(LogEventLevel.Information);
+                           .LogToTrace(LogEventLevel.Information);
         }
 
         // The entry point. Things aren't ready yet, so at this point

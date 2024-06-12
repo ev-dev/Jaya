@@ -79,7 +79,7 @@ Task("BuildWindows64")
     Information("Build for Windows (64-bit).");
     var settings = new DotNetCorePublishSettings
     {
-        Framework = "netcoreapp3.1",
+        Framework = "net8.0",
         Configuration = "Release",
         SelfContained = true,
         Runtime = "win-x64",
@@ -115,7 +115,7 @@ Task("BuildMacOS64")
     Information("Build for MacOS (64-bit).");
     var settings = new DotNetCorePublishSettings
     {
-        Framework = "netcoreapp3.1",
+        Framework = "net8.0",
         Configuration = "Release",
         SelfContained = true,
         Runtime = "osx-x64",
@@ -142,7 +142,7 @@ Task("BuildLinux64")
     Information("Build for Linux (64-bit).");
     var settings = new DotNetCorePublishSettings
     {
-        Framework = "netcoreapp3.1",
+        Framework = "net8.0",
         Configuration = "Release",
         SelfContained = true,
         Runtime = "linux-x64",

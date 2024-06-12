@@ -19,7 +19,7 @@ namespace Jaya.Shared
         static ViewModelLocator()
         {
             AutoWireViewModelProperty = AvaloniaProperty.RegisterAttached<Control, bool>("AutoWireViewModel", typeof(ViewModelLocator), false);
-            AutoWireViewModelProperty.Changed.Subscribe(args => AutoWireViewModelChanged(args?.Sender, args));
+            AutoWireViewModelProperty.Changed.Subscribe(args => AutoWireViewModelChanged((AvaloniaObject)(args?.Sender), args));
         }
 
         public static bool GetAutoWireViewModel(AvaloniaObject control)
