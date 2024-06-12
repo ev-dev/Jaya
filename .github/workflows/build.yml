@@ -15,7 +15,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [windows-latest, ubuntu-latest, macOS-latest]
+        os: [windows-latest]
     
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -23,7 +23,7 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Execute Build Script
-      uses: cake-build/cake-action@v1.1.1
+      uses: cake-build/cake-action@v2
       with:
         # The path of the Cake script to run.
         script-path: build/build.cake
